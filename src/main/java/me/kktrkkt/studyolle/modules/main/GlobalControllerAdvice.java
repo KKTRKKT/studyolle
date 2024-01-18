@@ -3,7 +3,6 @@ package me.kktrkkt.studyolle.modules.main;
 import lombok.extern.slf4j.Slf4j;
 import me.kktrkkt.studyolle.modules.account.CurrentUser;
 import me.kktrkkt.studyolle.modules.account.entity.Account;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
