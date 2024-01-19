@@ -20,6 +20,8 @@ jobs:
           cache: maven
       - name: cd resource folder
         run: |
+          pwd
+          mkdir ./src/main/resources
           cd ./src/main/resource
         shell: bash
       - name: Check out studyolle-prod-env
@@ -30,6 +32,12 @@ jobs:
           sparse-checkout: |
             application.yml
           sparse-checkout-cone-mode: false
+      - name: cd resource folder
+        run: |
+          pwd
+          cd ../../../
+          pwd
+        shell: bash
       - name: Build project
         run: mvn clean install -DskipTests
       - name: Login to docker hub
