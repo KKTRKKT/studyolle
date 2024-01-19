@@ -29,8 +29,7 @@ jobs:
           sparse-checkout-cone-mode: false
       - name: cp application.yml
         run: |
-          cp ./studyolle-prod-env/application.yml ./
-          ls -a
+          cp ./studyolle-prod-env/application.yml ./src/main/resources/application.yml
         shell: bash
       - name: Build project
         run: mvn clean install -DskipTests
