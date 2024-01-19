@@ -29,7 +29,7 @@ jobs:
           sparse-checkout-cone-mode: false
       - name: cp application.yml
         run: |
-          cp ./conf/application.yml ./
+          cp ./studyolle-prod-env/application.yml ./
           ls -a
         shell: bash
       - name: Build project
