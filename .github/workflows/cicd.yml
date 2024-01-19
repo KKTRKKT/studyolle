@@ -27,6 +27,10 @@ jobs:
           sparse-checkout: |
             application.yml
           sparse-checkout-cone-mode: false
+      - name: ls
+        run: |
+          pwd
+          ls -a
         shell: bash
       - name: Build project
         run: mvn clean install -DskipTests
