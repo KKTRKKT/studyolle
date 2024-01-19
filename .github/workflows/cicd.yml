@@ -50,10 +50,10 @@ jobs:
         with:
           repository: KKTRKKT/studyolle-prod-env
           token: ${{secrets.PAT}}
+      - name: pull docker image
+        run: sudo docker pull paulhana6006/studyolle
       - name: Remove docker container
         run: sudo docker compose down
-      - name: Remove docker image
-        run: sudo docker images | grep paulhana6006/studyolle && sudo docker rmi paulhana6006/studyolle
       - name: Run docker container
         run: sudo docker compose up -d
 
