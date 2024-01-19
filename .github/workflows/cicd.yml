@@ -53,7 +53,7 @@ jobs:
       - name: Remove docker container
         run: sudo docker compose down
       - name: Remove docker image
-        run: sudo docker rmi paulhana6006/studyolle
+        run: sudo docker images | grep paulhana6006/studyolle && sudo docker rmi paulhana6006/studyolle
       - name: Run docker container
         run: sudo docker compose up -d
 
