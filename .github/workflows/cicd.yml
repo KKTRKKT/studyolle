@@ -23,13 +23,10 @@ jobs:
         with:
           repository: KKTRKKT/studyolle-prod-env
           token: ${{secrets.PAT}}
+          path: conf
           sparse-checkout: |
             application.yml
-          sparse-checkout-cone-mode: true
-      - name: ls
-        run: |
-          pwd
-          ls -a
+          sparse-checkout-cone-mode: false
         shell: bash
       - name: Build project
         run: mvn clean install -DskipTests
