@@ -21,7 +21,7 @@ jobs:
       - name: cd resource folder
         run: |
           pwd
-          cd ./src/main/resource
+          cd ./src/main/resources
         shell: bash
       - name: Check out studyolle-prod-env
         uses: actions/checkout@v4
