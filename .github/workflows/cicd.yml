@@ -50,7 +50,7 @@ jobs:
         with:
           repository: KKTRKKT/studyolle-prod-env
           token: ${{secrets.PAT}}
-      - name: pull docker image
+      - name: Pull docker image
         run: sudo docker pull paulhana6006/studyolle
       - name: Remove docker container
         run: sudo docker compose down
