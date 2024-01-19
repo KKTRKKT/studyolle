@@ -18,11 +18,18 @@ jobs:
           java-version: ${{matrix.java}}
           distribution: 'adopt'
           cache: maven
-#      - name: Check out studyolle-prod-env
-#        uses: actions/checkout@master
-#        with:
-#          repository: KKTRKKT/studyolle-prod-env
-#          token: ${{secrets.PAT}}
+      - name: cd resource folder
+        run: |
+          cd ./src/main/resource
+        shell: bash
+      - name: Check out studyolle-prod-env
+        uses: actions/checkout@v4
+        with:
+          repository: KKTRKKT/studyolle-prod-env
+          token: ${{secrets.PAT}}
+          sparse-checkout: |
+            application.yml
+          sparse-checkout-cone-mode: false
       - name: Build project
         run: mvn clean install -DskipTests
       - name: Login to docker hub
