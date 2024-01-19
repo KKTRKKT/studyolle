@@ -21,7 +21,6 @@ jobs:
       - name: cd resource folder
         run: |
           pwd
-          mkdir ./src/main/resources
           cd ./src/main/resource
         shell: bash
       - name: Check out studyolle-prod-env
