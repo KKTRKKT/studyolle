@@ -27,7 +27,6 @@ jobs:
           sparse-checkout: |
             application.yml
           sparse-checkout-cone-mode: false
-        shell: bash
       - name: Build project
         run: mvn clean install -DskipTests
       - name: Login to docker hub
